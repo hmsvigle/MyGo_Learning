@@ -4,7 +4,17 @@ My hands on Trial of Go Tutorials
 ### Environment Variables: 
  * **`GOROOT`** : Go installation Directory
  *  `export PATH=$PATH:/$GOROOT/bin`
- * **`GOPATH`**: Defines Go-workspace. Kind of pushes towards a monolythic workspace to use, so that necessary libraries/packages/modules will be downloaded to GOROOT directory & can be used in the code developed under GOPATH
+ * **`GOPATH`**: Defines Go-workspace. Kind of pushes towards a monolythic workspace to use, so that necessary libraries/packages/modules will be downloaded to `GOPATH` directory & can be used in the code developed under GOPATH. 
+    * Alternatively, we can add another workspace directory along with existing one for `GOPATH`. 
+    * The modules will be installed under the first directory mentioned in `GOPATH`. 
+    * While compiling source code will be searched in all the directories mentioned in `GOPATH`.
+```sh
+  $ vim ~/.bashrc
+  $  export GOPATH=/home/himansu/go
+  $  export GOPATH=$GOPATH:/home/himansu/Documents/GoLang
+  $  export PATH=$PATH:/$GOPATH/bin
+  $ source ~/.bashrc
+```
  * Normally `$GOROOT/lib` directory is empty. So we will have to download all required initial libraries by **`go get github.com/nsf/gocode`**
 * You can find values of all Go Env Variables by `$ go env`
 
