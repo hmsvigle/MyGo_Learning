@@ -15,7 +15,6 @@ const (
 func main() {
 
 	const a int = 42
-
 	fmt.Println("\n inner decleration can change the global constant value.")
 	fmt.Printf("constant a = %v, %T\n", a, a)
 
